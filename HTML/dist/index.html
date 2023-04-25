@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>:: My-Task:: Dashboard </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->    
+    <!-- project css file  -->
+    <link rel="stylesheet" href="assets/css/my-task.style.min.css">
+</head>
+<body>
+
+<div id="mytask-layout" class="theme-indigo">
+    
+    <!-- sidebar -->
+    <div class="sidebar px-4 py-4 py-md-5 me-0">
+        <div class="d-flex flex-column h-100">
+            <a href="index.html" class="mb-0 brand-icon">
+                <span class="logo-icon">
+                    <svg  width="35" height="35" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                </span>
+                <span class="logo-text">G-CNIT</span>
+            </a>
+            <!-- Menu: main ul -->
+
+            <ul class="menu-list flex-grow-1 mt-3">
+                <li class="collapsed">
+                    <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#dashboard-Components" href="#">
+                        <i class="icofont-home fs-5"></i> <span>Dashboard</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                    <!-- Menu: Sub menu ul -->
+                    <ul class="sub-menu collapse show" id="dashboard-Components">
+                        <li><a class="ms-link active" href="index.html"> <span>Tableau de bord</span></a></li>
+                    </ul>
+                </li>
+                <li  class="collapsed">
+                    <a class="m-link"  href="projets.html">
+                        <i class="icofont-briefcase"></i><span>Les Projets</span> </span></a>
+                    <!-- Menu: Sub menu ul -->
+                </li>
+                
+                <li class="collapsed">
+                    <a class="m-link"  href="fonctionnalite.html"><i
+                            class="icofont-ticket"></i> <span>Les Fonctionnalités</span> </a>
+                    <!-- Menu: Sub menu ul -->
+                </li>
+                <li class="collapsed">
+                    <a class="m-link"  href="taches.html"><i class="icofont-paint"></i> <span>Les Tâches</span></a>
+                    <!-- Menu: Sub menu ul -->
+                </li>
+                <li class="collapsed">
+                    <a class="m-link" data-bs-toggle="collapse" data-bs-target="#emp-Components" href="#"><i
+                            class="icofont-users-alt-5"></i> <span>Les Utilisateurs</span> <span class="arrow icofont-dotted-down ms-auto text-end fs-5"></span></a>
+                    <!-- Menu: Sub menu ul -->
+                    <ul class="sub-menu collapse" id="emp-Components">
+                        <li><a class="ms-link" href="#"> <span>Administrateur</span></a></li>
+                        <li><a class="ms-link" href="#"> <span>Superviseur</span></a></li>
+                        <li><a class="ms-link" href="#"> <span>Agents</span></a></li>
+                    </ul>
+                </li>
+               
+                <li class="collapsed">
+                    <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Componentsone" href="#"><i
+                            class="icofont-ui-calculator"></i> <span>Rapports</span> </a>
+                    <!-- Menu: Sub menu ul -->
+                </li>
+                
+            </ul>
+
+            <!-- Theme: Switch Theme -->
+            <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center justify-content-center">
+                    <div class="form-check form-switch theme-switch">
+                        <input class="form-check-input" type="checkbox" id="theme-switch">
+                        <label class="form-check-label" for="theme-switch">Activer le Mode Sombre</label>
+                    </div>
+                </li>
+                
+            </ul>
+            
+            <!-- Menu: menu collepce btn -->
+            <button type="button" class="btn btn-link sidebar-mini-btn text-light">
+                <span class="ms-2"><i class="icofont-bubble-right"></i></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- main body area -->
+    <div class="main px-lg-4 px-md-4">
+
+        <!-- Body: Header -->
+        <div class="header">
+            <nav class="navbar py-4">
+                <div class="container-xxl">
+    
+                    <!-- header rightbar icon -->
+                    <div class="h-right d-flex align-items-center mr-5 mr-lg-0 order-1">
+                       
+                       
+                        <div class="dropdown user-profile ml-2 ml-sm-3 d-flex align-items-center zindex-popover">
+                            <div class="u-info me-2">
+                                <p class="mb-0 text-end line-height-sm "><span class="font-weight-bold">Agent CNIT</span></p>
+                                <small>Admin</small>
+                            </div>
+                            <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                <img class="avatar lg rounded-circle img-thumbnail" src="assets/images/profile_av.webp" alt="profile">
+                            </a>
+                            <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0 m-0">
+                                <div class="card border-0 w280">
+                                    <div class="card-body pb-0">
+                                        <div class="d-flex py-1">
+                                            <img class="avatar rounded-circle" src="assets/images/profile_av.webp" alt="profile">
+                                            <div class="flex-fill ms-3">
+                                                <p class="mb-0"><span class="font-weight-bold">Agent CNIT</span></p>
+                                                <small class="">Agent.cnit@gmail.com</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><hr class="dropdown-divider border-dark"></div>
+                                    </div>
+                                    <div class="list-group m-2 ">
+                                        <a href="#" class="list-group-item list-group-item-action border-0 "><i class="icofont-tasks fs-5 me-3"></i>Les projets</a>
+                                        <a href="#" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-user-group fs-6 me-3"></i>Les équipes</a>
+                                        <a href="ui-elements/auth-signin.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Déconnexion</a>
+                                        <div><hr class="dropdown-divider border-dark"></div>
+                                        <a href="ui-elements/auth-signup.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-contact-add fs-5 me-3"></i>Ajouter un compte Agent</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- menu toggler -->
+                    <button class="navbar-toggler p-0 border-0 menu-toggle order-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainHeader">
+                        <span class="fa fa-bars"></span>
+                    </button>
+    
+                    <!-- main menu Search-->
+                    <div class="order-0 col-lg-4 col-md-4 col-sm-12 col-12 mb-3 mb-md-0 ">
+                        <div class="input-group flex-nowrap input-group-lg">
+                            <h5 style="background-color:#03a84e; color: white;" class="input-group-text" id="addon-wrapping">Application de gestion de projet de la CNIT</h5>
+                        </div>
+                    </div>
+    
+                </div>
+            </nav>
+        </div>
+
+        <!-- Body: Body -->
+        <div class="body d-flex py-3">
+            <div class="container-xxl">
+                <div class="row g-3 mb-3 row-deck">
+                    <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                        <div class="card ">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar lg  rounded-1 no-thumbnail bg-lightyellow color-defult"><i class="bi bi-journal-check fs-4"></i></div>
+                                    <div class="flex-fill ms-4">
+                                        <div class="">Les projets</div>
+                                        <h5 class="mb-0 ">122</h5>
+                                    </div>
+                                    <a href="#" title="view-members" class="btn btn-link text-decoration-none  rounded-1"><i class="icofont-hand-drawn-right fs-2 "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                        <div class="card ">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar lg  rounded-1 no-thumbnail bg-lightblue color-defult"><i class="bi bi-list-check fs-4"></i></div>
+                                    <div class="flex-fill ms-4">
+                                        <div class="">Les projets realisés</div>
+                                        <h5 class="mb-0 ">376</h5>
+                                    </div>
+                                    <a href="#" title="space-used" class="btn btn-link text-decoration-none  rounded-1"><i class="icofont-hand-drawn-right fs-2 "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                        <div class="card ">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar lg  rounded-1 no-thumbnail bg-lightgreen color-defult"><i class="bi bi-clipboard-data fs-4"></i></div>
+                                    <div class="flex-fill ms-4">
+                                        <div class="">Les projets en cours</div>
+                                        <h5 class="mb-0 ">74</h5>
+                                    </div>
+                                    <a href="#" title="renewal-date" class="btn btn-link text-decoration-none  rounded-1"><i class="icofont-hand-drawn-right fs-2 "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Row End -->
+                <div class="row g-3 mb-3 row-deck">
+                    <div class="col-md-12 col-lg-8 col-xl-7 col-xxl-7">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-md-5 col-lg-6 order-md-2 ">
+                                        <div class="text-center p-4">
+                                            <img src="assets/images/task-view.svg" alt="..." class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-7 col-lg-6 order-md-1 px-4">
+                                        <h3 class="fw-bold ">Bonjour, Agent CNIT</h3>
+                                        <p class="line-height-custom">Bienvenue Agent CNIT. Integer molestie, arcu non porta sollicitudin, arcu felis aliquam urna, placerat maximus lorem urna commodo sem. Pellentesque venenatis leo quam, sed mattis sapien lobortis ut.placerat maximus lorem urna commodo sem</p>
+                                        <a class="btn bg-secondary text-light btn-lg lift" href="#" target="_blank">Voir mes taches</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-xl-5 col-xxl-5">
+                        <div class="alert alert-primary p-3 mb-0 w-100">
+                            <h6 class="fw-bold mb-1">Création rapide de projet</h6>
+                            <p class="small mb-4">Créer un projet afin de suivre son évolutio en ligne</p>
+                            <div class="my-3 ">
+                                <label class=" form-control-sm">Le libelé</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Entrer le libelé">
+                            </div>
+                            <div class="my-3">
+                                <label class=" form-control-sm">Date de début</label>
+                                <input type="date" class="form-control form-control-lg" >
+                            </div>
+                            <div class="my-3">
+                                <label class=" form-control-sm">Date de fin</label>
+                                <input type="date" class="form-control form-control-lg" >
+                            </div>
+                            <button class="btn btn-primary mt-2">Créer le projet</button>
+                        </div>
+                    </div>
+                </div><!-- Row End -->
+                <div class="row g-3 mb-3 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 row-cols-xxl-4">
+                    <div class="col">
+                        <div class="card bg-primary">
+                            <div class="card-body text-white d-flex align-items-center">
+                                <i class="icofont-data fs-3"></i>
+                                <div class="d-flex flex-column ms-3">
+                                    <h6 class="mb-0">Tous les projets</h6>
+                                    <span class="text-white">550</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-primary">
+                            <div class="card-body text-white d-flex align-items-center">
+                                <i class="icofont-chart-flow fs-3"></i>
+                                <div class="d-flex flex-column ms-3">
+                                    <h6 class="mb-0">Fonctionnalités</h6>
+                                    <span class="text-white">210</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-primary">
+                            <div class="card-body text-white d-flex align-items-center">
+                                <i class="icofont-chart-flow-2 fs-3"></i>
+                                <div class="d-flex flex-column ms-3">
+                                    <h6 class="mb-0">Tâches</h6>
+                                    <span class="text-white">8456 Files</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-primary">
+                            <div class="card-body text-white d-flex align-items-center">
+                                <i class="icofont-tasks fs-3"></i>
+                                <div class="d-flex flex-column ms-3">
+                                    <h6 class="mb-0">Projets terminés</h6>
+                                    <span class="text-white">88 Files</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+            </div>             
+        </div>
+    </div>
+</div>
+
+<!-- Jquery Core Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script>
+
+<!-- Jquery Page Js -->
+<script src="../js/template.js"></script>
+<script src="../js/page/index.js"></script>
+
+</body>
+</html> 
