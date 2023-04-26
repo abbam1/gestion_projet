@@ -1,6 +1,6 @@
 
 // script pour afficher les données avec axios
-axios.get('http://192.168.1.103:8000/api/listeprojet')
+axios.get('http://projet.inforiz.org/api/listeprojet')
   .then(function (response) {
 let div=''
 
@@ -127,7 +127,7 @@ formAdd.addEventListener('submit', function(e){
   const dateFin = document.getElementById("dateFin").value; 
 
 
-    axios.post(`http://192.168.1.103:8000/api/addProjet`,{
+    axios.post(`http://projet.inforiz.org/api/addProjet`,{
         libelle:lib,
         date_debut:dateDebut,
         date_fin:dateFin
@@ -165,7 +165,7 @@ console.log(response.data)
 // script pour afficher les données dans les input au click
 function test(id){
 
-    axios.get(`http://192.168.1.103:8000/api/projet/${id}`)
+    axios.get(`http://projet.inforiz.org/api/projet/${id}`)
     .then(function (response) {
     
     document.getElementById("libelle_M").value = response.data.response_message[0].libelle; 
@@ -197,7 +197,7 @@ formModif.addEventListener('submit', function(e){
   const dateFin = document.getElementById("dateFin_M").value; 
 
 
-    axios.post(`http://192.168.1.103:8000/api/updateProjet/${id}`,{
+    axios.post(`http://projet.inforiz.org/api/updateProjet/${id}`,{
         libelle:lib,
         date_debut:dateDebut,
         date_fin:dateFin

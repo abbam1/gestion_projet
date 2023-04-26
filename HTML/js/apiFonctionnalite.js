@@ -7,7 +7,7 @@ var idProj;
 
 // script pour afficher les données avec axios
 axios
-  .get(`http://192.168.1.103:8000/api/projet/${projet}`)
+  .get(`http://projet.inforiz.org/api/projet/${projet}`)
   .then(function (response) {
     let variable = response.data.response_message[0].libelle;
     title = document.getElementById("titre");
@@ -22,7 +22,7 @@ axios
 
     //script pour afficher les données des fonctionnalités dans le tableau
     axios
-      .get(`http://192.168.1.103:8000/api/projet/${idProj}/fonctionnalite`)
+      .get(`http://projet.inforiz.org/api/projet/${idProj}/fonctionnalite`)
       .then(function (response) {
         console.log(response.data.response_message[0]);
 
@@ -35,7 +35,7 @@ ${response.data.response_message[i].libelle}
                                            <td><span class="badge bg-warning">${response.data.response_message[i].status}</span></td>
                                             <td>
                                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                                    <a href="taches.html"><button type="button" class="btn btn-outline-secondary"><i class="icofont-plus-circle me-2 fs-6"></i></button></a>
+                                                    <a href="taches.html?fonctionnalite=${response.data.response_message[i].id}"><button type="button" class="btn btn-outline-secondary"><i class="icofont-plus-circle me-2 fs-6"></i></button></a>
                                                     <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#fonctionnaliteModif" onclick='test(${response.data.response_message[i].id},"${response.data.response_message[i].libelle}")' ><i class="icofont-edit text-success"></i></button>
                                                     <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button>
                                                 </div>
@@ -85,7 +85,7 @@ formAdd.addEventListener('submit', function(e){
 
 
 
-    axios.post(`http://192.168.1.103:8000/api/addFonctionnalite`,{
+    axios.post(`http://projet.inforiz.org/api/addFonctionnalite`,{
         libelle:lib,
         projet:id
     })
@@ -132,7 +132,7 @@ formModif.addEventListener('submit', function(e){
 
 
 
-    axios.post(`http://192.168.1.103:8000/api/updateFonctionnalite`,{
+    axios.post(`http://projet.inforiz.org/api/updateFonctionnalite`,{
         libelle:lib,
         id:id
     })
